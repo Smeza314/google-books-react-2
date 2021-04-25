@@ -1,5 +1,3 @@
-import Book from '../../utils/googleBooksApi'
-import Form from '../../components/Form'
 import { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
@@ -11,7 +9,8 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import CardHeader from '@material-ui/core/CardHeader'
 import Avatar from '@material-ui/core/Avatar'
-
+import Book from '../../utils/googleBooksAPI'
+import Form from '../../components/Form'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -87,7 +86,7 @@ const Search = () => {
                   Save
                 </Button>
                 <Button
-                  size='large'
+                  size='small'
                   color='primary'
                   href={book.volumeInfo.canonicalVolumeLink}
                 >
