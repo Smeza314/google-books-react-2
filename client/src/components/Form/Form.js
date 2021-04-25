@@ -9,8 +9,8 @@ const Form = ({
   return (
     <form onSubmit={handleSearchBook}>
       <TextField
-        label= 'Search Book'
-        name= 'search'
+        label='Search Book'
+        name='search'
         value={search}
         onChange={handleInputChange}
       />
@@ -18,7 +18,9 @@ const Form = ({
         variant='outlined'
         color='primary'
         onClick={handleSearchBook}
-      />
+      >
+        Search
+      </Button>
     </form>
   )
 }

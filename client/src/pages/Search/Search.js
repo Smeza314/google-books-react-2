@@ -2,11 +2,15 @@ import Book from '../../utils/googleBooksApi'
 import Form from '../../components/Form'
 import { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+import TextField from '@material-ui/core/TextField'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import CardHeader from '@material-ui/core/CardHeader'
 import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import CardHeader from '@material-ui/core/CardHeader'
+import Avatar from '@material-ui/core/Avatar'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -74,7 +78,7 @@ const Search = () => {
                   color='primary'
                   onClick={() => handleSaveBook({
                     title: book.volumeInfo.title,
-                    authors: book.volumeInfo.author[0],
+                    authors: book.volumeInfo.authors[0],
                     description: book.volumeInfo.description,
                     image: book.volumeInfo.imageLinks.thumbnail,
                     link: book.volumeInfo.canonicalVolumeLink
@@ -83,7 +87,7 @@ const Search = () => {
                   Save
                 </Button>
                 <Button
-                  size='small'
+                  size='large'
                   color='primary'
                   href={book.volumeInfo.canonicalVolumeLink}
                 >
